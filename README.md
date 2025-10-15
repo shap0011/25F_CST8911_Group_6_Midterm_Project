@@ -2,7 +2,7 @@
 
 ### Students:
 
-- Durham Olga - shap0011@algonqionlive.com
+- Durham Olga - 040687883 - shap0011@algonqionlive.com
 - Heallis Dom - heal0076@algonquinlive.com
 - Mendzora Jediael - mend0214@algonquinlive.com
 - Parsons Matthew - pars0230@algonquinlive.com

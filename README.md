@@ -6,4 +6,4 @@
 - Heallis Dom - heal0076@algonquinlive.com
 - Mendzora Jediael - mend0214@algonquinlive.com
 - Parsons Matthew - pars0230@algonquinlive.com
-- Saini Saizal - sain0225@algonquinlive.com
+- Saini Saizal - 041168394 - sain0225@algonquinlive.com

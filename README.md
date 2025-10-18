@@ -13,7 +13,7 @@
 ### Virtual machine
 
 ![Region US East is not available](./screenshots/image-35.png)
-Create a virtual machine, `US East` region is not available for some services so we are going to use `Canada Central` region and keep it consistent for **Azure Function App** and **Cosmos DB** as well.
+Creating a virtual machine for the `US East` region is not available for some services. So, we are going to use `Canada Central` region and keep it consistent for **Azure Function App** and **Cosmos DB** as well.
 
 ![Filled up the basic information for VM](./screenshots/image-8.png)
 

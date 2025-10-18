@@ -28,13 +28,16 @@ We filled up the _basic information_ for the virtual machine:
 We're using this image because it is _cheap_ and also _allows us_ to install _Postman_ to test our **Function App** later.
 
 ![Selected image size & created administrator account](./screenshots/image-9.png)
-Select image size of **"Standard_B2als"** which has _2vcpus_ and _4Gib_ memory. We're using this image and size because it is the cheapest option that allows us to install Postman to test our **Function App** later and to login to Azure portal to manage our _database_. We tested cheaper image sizes but the virtual machines crashes from opening a browser. We created an _administrator account_ to login through **Bastion** later.
+
+The **"Standard_B2als"** image size, which has _2 vCPUs_ and _4 GiB_ of memory, was selected. We chose this image and size because it is the most affordable option that still allows us to install Postman to test our **Function App** later and log in to the Azure portal to manage our _database_. We tested cheaper image sizes, but the virtual machines crashed when opening a browser. We also created an _administrator account_ to log in through **Bastion** later.
 
 ![Virtual network created](./screenshots/image-10.png)
-We created a _virtual network_ named `Group6-VM1-vnet`, and leave the other options default.
+
+We created a _virtual network_ named `Group6-VM1-vnet` and left the other options as default.
 
 ![alt text](./screenshots/image-11.png)
-Create and deploy the virtual machine.
+
+The virtual machine has been created and deployed.
 
 ---
 

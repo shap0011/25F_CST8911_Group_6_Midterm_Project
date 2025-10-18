@@ -12,17 +12,17 @@
 
 ### Virtual machine
 
-![alt text](./screenshots/image-35.png)
-Create a virtual machine, US East region is not available for some services so we are going to use Canada Central region and keep it consistent for Azure Function App and Cosmos DB as well.
+![Region US East is not available](./screenshots/image-35.png)
+Create a virtual machine, `US East` region is not available for some services so we are going to use `Canada Central` region and keep it consistent for **Azure Function App** and **Cosmos DB** as well.
 
-![alt text](./screenshots/image-8.png)
-Fill up the basic information for the virtual machine.We select our student subscription, create a new resource group named "CST8911-Group6", name our virtual machine Group6-VM1, select Canada Central, and choose Windows Server 2022. We're using this image because it is cheap and also allows us to install Postman to test our Function App later.
+![Filled up the basic information for VM](./screenshots/image-8.png)
+Fill up the _basic information_ for the virtual machine.We select our student subscription, create a new resource group named **"CST8911-Group6"**, name our virtual machine **Group6-VM1**, select **Canada Central**, and choose **Windows Server 2022**. We're using this image because it is cheap and also allows us to install _Postman_ to test our **Function App** later.
 
-![alt text](./screenshots/image-9.png)
-Select image size of "Standard_B2als" which has 2vcpus and 4Gib memory. We're using this image and size because it is the cheapest option that allows us to install Postman to test our Function App later and to login to Azure portal to manage our database. We tested cheaper image sizes but the virtual machines crashes from openning a browser. We created an administrator account to login through Bastion later.
+![Selected image size & created administrator account](./screenshots/image-9.png)
+Select image size of **"Standard_B2als"** which has _2vcpus_ and _4Gib_ memory. We're using this image and size because it is the cheapest option that allows us to install Postman to test our **Function App** later and to login to Azure portal to manage our _database_. We tested cheaper image sizes but the virtual machines crashes from opening a browser. We created an _administrator account_ to login through **Bastion** later.
 
-![alt text](./screenshots/image-10.png)
-We created a virtual network named Group6-VM1-vnet, and leave the other options default.
+![Virtual network created](./screenshots/image-10.png)
+We created a _virtual network_ named `Group6-VM1-vnet`, and leave the other options default.
 
 ![alt text](./screenshots/image-11.png)
 Create and deploy the virtual machine.

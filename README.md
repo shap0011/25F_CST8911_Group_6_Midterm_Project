@@ -27,6 +27,8 @@ We created a _virtual network_ named `Group6-VM1-vnet`, and leave the other opti
 ![alt text](./screenshots/image-11.png)
 Create and deploy the virtual machine.
 
+---
+
 ### Cosmos DB Setup
 
 ![alt text](./screenshots/image.png)
@@ -40,6 +42,8 @@ Leave these default.
 ![alt text](./screenshots/image-4.png)
 ![alt text](./screenshots/image-41.png)
 
+---
+
 ### Function App
 
 ![alt text](./screenshots/image-6.png)
@@ -50,6 +54,8 @@ Leave these default.
 ![alt text](./screenshots/image-16.png)
 ![alt text](./screenshots/image-46.png)
 
+---
+
 ### Networking
 
 ![alt text](./screenshots/image-17.png)
@@ -59,6 +65,8 @@ Leave these default.
 ![alt text](./screenshots/image-21.png)
 ![alt text](./screenshots/image-22.png)
 ![alt text](./screenshots/image-24.png)
+
+---
 
 ### Environment Setup
 
@@ -73,6 +81,8 @@ Leave these default.
 ![alt text](./screenshots/image-38.png)
 ![alt text](./screenshots/image-36.png)
 ![alt text](./screenshots/image-40.png)
+
+---
 
 ### Testing
 

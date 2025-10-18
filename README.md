@@ -16,7 +16,16 @@
 Create a virtual machine, `US East` region is not available for some services so we are going to use `Canada Central` region and keep it consistent for **Azure Function App** and **Cosmos DB** as well.
 
 ![Filled up the basic information for VM](./screenshots/image-8.png)
-Fill up the _basic information_ for the virtual machine.We select our student subscription, create a new resource group named **"CST8911-Group6"**, name our virtual machine **Group6-VM1**, select **Canada Central**, and choose **Windows Server 2022**. We're using this image because it is cheap and also allows us to install _Postman_ to test our **Function App** later.
+
+We filled up the _basic information_ for the virtual machine:
+
+- selected our student subscription,
+- created a new resource group named **"CST8911-Group6"**,
+- named our virtual machine **Group6-VM1**,
+- selected **Canada Central**,
+- chosen **Windows Server 2022**.
+
+We're using this image because it is _cheap_ and also _allows us_ to install _Postman_ to test our **Function App** later.
 
 ![Selected image size & created administrator account](./screenshots/image-9.png)
 Select image size of **"Standard_B2als"** which has _2vcpus_ and _4Gib_ memory. We're using this image and size because it is the cheapest option that allows us to install Postman to test our **Function App** later and to login to Azure portal to manage our _database_. We tested cheaper image sizes but the virtual machines crashes from opening a browser. We created an _administrator account_ to login through **Bastion** later.

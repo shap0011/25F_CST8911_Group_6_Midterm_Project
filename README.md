@@ -210,3 +210,45 @@ content-length: 0
 ### New Function App created
 
 <img src="./screenshots/17_troubleshooting_new_function_created.png" alt="New Function App created" title="New Function App created" width="1000" />
+
+### Create function
+
+<img src="./screenshots/18_create_function.png" alt="Create function" title="Create function" width="1000" />
+
+function_app.py
+
+```
+import azure.functions as func
+import logging
+
+app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+
+@app.route(route="items_get")
+def items_get(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a request.')
+
+    name = req.params.get('name')
+    if not name:
+        try:
+            req_body = req.get_json()
+        except ValueError:
+            pass
+        else:
+            name = req_body.get('name')
+
+    if name:
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    else:
+        return func.HttpResponse(
+             "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body for a personalized response.",
+             status_code=200
+        )
+```
+
+The test run with error
+
+```
+Error: {"message":"Failed to fetch","stack":"TypeError: Failed to fetch\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:24257\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:24478\n    at rt (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:7018)\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:10780\n    at Array.forEach (<anonymous>)\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:10768\n    at Object.rt (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:7018)\n    at x (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:60:1993)\n    at y (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:60:1824)","isError":true}
+```
+
+### Troubleshooting

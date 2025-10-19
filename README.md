@@ -179,14 +179,17 @@ The function was deployed to the **Function App** to initialize the **REST API**
 
 ### Testing
 
-![alt text](./screenshots/image-40.png)
+![Code + Test](./screenshots/image-40.png)
 
-We tested the function in the azure portal to make sure that the function is working properly.
+The **function** was tested in the **Azure portal** to verify that it is functioning correctly.
 
-![alt text](./screenshots/image-29.png)
+![Postman Get data Test](./screenshots/image-29.png)
 
-We properly tested the function by using Postman to send HTTP GET request to the Function App default domain "group6functionapp-e6huapcubacahdcf.canadacentral-01.azurewebsites.net". Note that Postman is running in the VM since any other requests from IPs outside of the virtual network will be denied, this is one of the security parameters.
+We thoroughly tested the function using **Postman** to send an **HTTP GET request** to the Function App’s default domain:
+`group6functionapp-e6huapcubacahdcf.canadacentral-01.azurewebsites.net`.
 
-![alt text](./screenshots/image-31.png)
+Note that **Postman was run within the virtual machine**, since any requests from IPs outside the virtual network are denied. This serves as one of our key **security measures**.
 
-We successfully made an HTTP GET request and received an HTTP response containing a JSON of items in the Cosmos DB.
+![Postman Get data Test result](./screenshots/image-31.png)
+
+We successfully sent an **HTTP GET request** and received a **JSON response** with the items from the **Cosmos DB**.

@@ -209,4 +209,4 @@ content-length: 0
 
 ### New Function App created
 
-<img src="./screenshots/16_new_function_created.png" alt="New Function App created" title="New Function App created" width="1000" />
+<img src="./screenshots/17_troubleshooting_new_function_created.png" alt="New Function App created" title="New Function App created" width="1000" />

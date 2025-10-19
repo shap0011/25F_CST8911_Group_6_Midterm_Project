@@ -312,3 +312,7 @@ def items_post(req: func.HttpRequest, doc: func.Out[Any]) -> func.HttpResponse:
     )
 
 ```
+
+### Added Cosmos DB connection string to `func-midterm-c17521` Function App | Environment variables
+
+<img src="./screenshots/20_added_connection_string.png" alt="Added Cosmos DB connection string" title="Added Cosmos DB connection string" width="1000" />

@@ -79,3 +79,17 @@ Public key generated
 The entire public key
 
 <img src="./screenshots/9_entire_public_key.png" alt="Entire public key" title="Entire public key" width="1000" />
+
+### Add key to VM + lock NSG to the home IP
+
+**Key added - IP locked to 23.233.24.110/32**
+
+---
+
+## SSH to the VM and harden SSH
+
+Verify VM power state
+
+<img src="./screenshots/10_vm_running.png" alt="VM running" title="VM running" width="1000" />
+
+---

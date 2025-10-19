@@ -68,13 +68,13 @@ We selected **key-based authentication** to enhance security by restricting acce
 
 ### Function App
 
-![alt text](./screenshots/image-6.png)
+![A hosting option selected](./screenshots/image-6.png)
 
-We created a function app with Flex consumption plan as it gives performance while being inexpensive with scale to zero and pay-as-you-go rate.
+We created a **Function App** with **Flex Consumption Plan**, as it offers strong performance while remaining cost-effective, with **scale-to-zero** capability and a **pay-as-you-go** pricing model.
 
-![alt text](./screenshots/image-12.png)
+![Project Details](./screenshots/image-12.png)
 
-Fill up the basic information for the function app:
+Fill up the _basic information_ for the Function App:
 
 - selected our student subscription,
 - select resource group named **"CST8911-Group6"**,
@@ -82,25 +82,25 @@ Fill up the basic information for the function app:
 - selected **Canada Central**,
 - chosen **Python 3.12** as it is a programming language we're very familiar with.
 
-![alt text](./screenshots/image-43.png)
+![Storage](./screenshots/image-43.png)
 
-Leave storage accounts default.
+Leave **storage account** default.
 
-![alt text](./screenshots/image-44.png)
+![Create Function App](./screenshots/image-44.png)
 
-Same with our database, we turn off public access and created a new private endpoint for accessing the function app.
+Similar to our database, we **turned off public access** and **created a new private endpoint** to access the **Function App**.
 
-![alt text](./screenshots/image-45.png)
+![Deployment](./screenshots/image-45.png)
 
-For deployment, leave it default as it is unavailable while using private endpoint.
+For deployment, the setting has been left at its **default value**, as it is **unavailable when using a private endpoint**.
 
-![alt text](./screenshots/image-16.png)
+![Authentication](./screenshots/image-16.png)
 
-Leave these dafault as well to limit access to these resources.
+The settings were left at their **default values** to **limit access** to the resources.
 
-![alt text](./screenshots/image-46.png)
+![The Function App created](./screenshots/image-46.png)
 
-We've created our function app in which we can deploy our Azure function REST API.
+We’ve created our "Function App", where we can deploy our "Azure Function REST API".
 
 ---
 

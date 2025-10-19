@@ -114,11 +114,11 @@ A **subnet** was created in the **VNet** for **Cosmos DB**, which hosts the **pr
 
 A **subnet** was also created for the **Function App**, and its **private endpoint** was connected.
 
-![alt text](./screenshots/image-19.png)
+![Security improvement](./screenshots/image-19.png)
 
 We separated the **Virtual Machine**, **Cosmos DB**, and **Function App** into different subnets to improve security by isolating the services and to enhance performance by using segmented IP addresses, which provide more direct routes and reduce network traffic.
 
-![alt text](./screenshots/image-47.png)
+![Private endpoints configuration](./screenshots/image-47.png)
 
 Screenshot showing the **private endpoints** configured for each **service**.
 
@@ -126,19 +126,19 @@ Screenshot showing the **private endpoints** configured for each **service**.
 
 ### Environment Setup
 
-We set up our database and created a python function app.
+We set up our **database** and created a **Python Function App**.
 
-![alt text](./screenshots/image-26.png)
+![Connect through Bastion](./screenshots/image-26.png)
 
-We connect to our virtual machine through Bastion in the Azure portal.
+We **connect to our virtual machine** through **Azure Bastion** in the Azure portal.
 
-![alt text](./screenshots/image-27.png)
+![The Command Prompt output](./screenshots/image-27.png)
 
-We check our connection to the function app to verify that our VM is connected to the same vnet.
+We **check** the connection to the **Function App** to verify that the **virtual machine** is connected to the same VNet.
 
-![alt text](./screenshots/image-34.png)
+![Data Explorer New Container](./screenshots/image-34.png)
 
-Since access to our Cosmos DB is only allowed through the private endpoint, we accessed and created a new database and new container using the Azure portal in the virtual machine which is in the same VNet.
+Because access to our **Cosmos DB** is restricted to the **private endpoint**, we used the **Azure portal** within the **virtual machine**, located in the same **VNet**, to create a **new database** and **container**.
 
 ![alt text](./screenshots/image-32.png)
 

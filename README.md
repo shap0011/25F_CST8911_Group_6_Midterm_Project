@@ -245,10 +245,6 @@ def items_get(req: func.HttpRequest) -> func.HttpResponse:
         )
 ```
 
-The test run with error
+The test output
 
-```
-Error: {"message":"Failed to fetch","stack":"TypeError: Failed to fetch\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:24257\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:24478\n    at rt (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:7018)\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:10780\n    at Array.forEach (<anonymous>)\n    at https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:10768\n    at Object.rt (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:254:7018)\n    at x (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:60:1993)\n    at y (https://portal.azure.com/Content/Dynamic/edwBZomu7mYy.js:60:1824)","isError":true}
-```
-
-### Troubleshooting
+<img src="./screenshots/19_test_GET_output.png" alt="The test output" title="The test output" width="1000" />

@@ -117,7 +117,7 @@ We also created a subnet for the function app and connected the private endpoint
 
 We separated the virtual machine, Cosmos DB, and Function App in different subnets to improve security by isolating the services and also improving performance by suing segmented IP addresses by providing more direct routes and decreasing traffic.
 
-![alt text](image.png)
+![alt text](./screenshots/image-47.png)
 
 These are the private endpoints for each services.
 

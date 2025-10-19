@@ -100,7 +100,7 @@ The settings were left at their **default values** to **limit access** to the re
 
 ![The Function App created](./screenshots/image-46.png)
 
-We’ve created our "Function App", where we can deploy our "Azure Function REST API".
+We’ve created our **Function App**, where we can deploy our **Azure Function REST API**.
 
 ---
 

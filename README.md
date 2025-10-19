@@ -93,3 +93,27 @@ Verify VM power state
 <img src="./screenshots/10_vm_running.png" alt="VM running" title="VM running" width="1000" />
 
 ---
+
+## Create Cosmos DB (Serverless)
+
+### Register the Cosmos DB resource provider
+
+Registered
+
+<img src="./screenshots/11_cosmos_db_registered.png" alt="Cosmos DB resource provider registered" title="Cosmos DB resource provider registered" width="1000" />
+
+### Create the Cosmos DB account
+
+Cosmos DB account created
+
+<img src="./screenshots/12_cosmos_account_created.png" alt="Cosmos DB account created" title="Cosmos DB account created" width="1000" />
+
+### Create DB and container
+
+<table>
+  <tr>
+    <td><img src="./screenshots/13_db_created.png" alt="DB created" title="DB created" width="475" /></td>
+    <td></td>
+    <td><img src="./screenshots/14_container_created.png" alt="Container created" title="Container created" width="475" /></td>
+  </tr>
+</table>

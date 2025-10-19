@@ -215,6 +215,8 @@ content-length: 0
 
 <img src="./screenshots/18_create_function.png" alt="Create function" title="Create function" width="1000" />
 
+Items GET
+
 function_app.py
 
 ```
@@ -248,3 +250,65 @@ def items_get(req: func.HttpRequest) -> func.HttpResponse:
 The test output
 
 <img src="./screenshots/19_test_GET_output.png" alt="The test output" title="The test output" width="1000" />
+
+Items POST
+
+function_app.py
+
+```
+import azure.functions as func
+import json
+import logging
+from typing import Any
+
+app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
+
+@app.route(route="items_get")
+def items_get(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('GET called.')
+    name = req.params.get('name')
+    if not name:
+        try:
+            req_body = req.get_json()
+            name = req_body.get('name')
+        except Exception:
+            name = None
+
+    if name:
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    return func.HttpResponse(
+        "This HTTP triggered function executed successfully. Pass a name in the query string or in the request body.",
+        status_code=200,
+    )
+
+
+# --- NEW version of items_post with Cosmos DB output binding ---
+@app.function_name(name="items_post")
+@app.route(route="items_post", methods=["post"], auth_level=func.AuthLevel.FUNCTION)
+@app.cosmos_db_output(
+    arg_name="doc",
+    database_name="dbMidterm",
+    container_name="items",
+    connection="COSMOS_CONN_STR",
+    create_if_not_exists=False,
+    partition_key="/id"
+)
+def items_post(req: func.HttpRequest, doc: func.Out[Any]) -> func.HttpResponse:
+    try:
+        body = req.get_json()
+    except ValueError:
+        return func.HttpResponse(json.dumps({"error": "Invalid JSON"}), status_code=400, mimetype="application/json")
+
+    if "id" not in body:
+        return func.HttpResponse(json.dumps({"error": "Missing 'id'"}), status_code=400, mimetype="application/json")
+
+    # Send document to Cosmos DB
+    doc.set(body)
+
+    return func.HttpResponse(
+        json.dumps({"ok": True, "item": body}),
+        mimetype="application/json",
+        status_code=200,
+    )
+
+```

@@ -127,3 +127,86 @@ Cosmos DB account created
 Function App is ready
 
 <img src="./screenshots/15_function_app_is_ready.png" alt="Function App is ready" title="Function App is ready" width="1000" />
+
+---
+
+## Deploy a minimal GET function (Python) via zip deploy
+
+### Set app setting, (re)zip, deploy, restart, verify
+
+```
+curl "https://${HOST}/api/items_get"
+[
+  {
+    "name": "FUNCTIONS_WORKER_RUNTIME",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "FUNCTIONS_EXTENSION_VERSION",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "AzureWebJobsStorage",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "WEBSITE_CONTENTAZUREFILECONNECTIONSTRING",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "WEBSITE_CONTENTSHARE",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "COSMOS_ENDPOINT",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "WEBSITE_RUN_FROM_PACKAGE",
+    "slotSetting": false,
+    "value": null
+  },
+  {
+    "name": "SCM_DO_BUILD_DURING_DEPLOYMENT",
+    "slotSetting": false,
+    "value": null
+  }
+]
+updating: host.json (stored 0%)
+updating: requirements.txt (deflated 16%)
+updating: items_get/ (stored 0%)
+updating: items_get/function.json (deflated 49%)
+updating: items_get/__init__.py (deflated 58%)
+ - Uploading ============================== 100.0% ..
+olga [ /tmp/midterm-api ]$
+```
+
+### Verifying the function is running and call it
+
+```
+curl -i "https://${HOST}/api/items_get"
+== Functions registered ==
+
+== Curling ==
+HTTP/2 404
+date: Sun, 19 Oct 2025 11:42:43 GMT
+server: Kestrel
+content-length: 0
+```
+
+### Troubleshooting
+
+### New Function App created
+
+<img src="./screenshots/16_new_function_created.png" alt="New Function App created" title="New Function App created" width="1000" />

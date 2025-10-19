@@ -117,3 +117,13 @@ Cosmos DB account created
     <td><img src="./screenshots/14_container_created.png" alt="Container created" title="Container created" width="475" /></td>
   </tr>
 </table>
+
+---
+
+## Create Function App (Python) + enable Managed Identity
+
+### Grant the Function’s Managed Identity Cosmos DB Data Contributor (data-plane)
+
+Function App is ready
+
+<img src="./screenshots/15_function_app_is_ready.png" alt="Function App is ready" title="Function App is ready" width="1000" />

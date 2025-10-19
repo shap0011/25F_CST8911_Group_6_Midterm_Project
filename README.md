@@ -35,7 +35,7 @@ The **"Standard_B2als"** image size, which has _2 vCPUs_ and _4 GiB_ of memory, 
 
 We created a _virtual network_ named `Group6-VM1-vnet` and left the other options as default.
 
-![alt text](./screenshots/image-11.png)
+![VM created and deployed](./screenshots/image-11.png)
 
 The virtual machine has been created and deployed.
 
@@ -43,8 +43,8 @@ The virtual machine has been created and deployed.
 
 ### Cosmos DB Setup
 
-![alt text](./screenshots/image.png)
-We created a Cosmos DB for NoSQL database, we used Learning workload type because we are only going to handle small amount of data for testing, put the database in the same resource group as before, named it "group6cosmodb", and select Canada Central region. We use serverless to minimize cost because we're only going to be using the datase when the function application is running and will be paused for most of the time.
+![Create Azure Cosmos DB Account](./screenshots/image.png)
+We created a **Cosmos DB** for **NoSQL** database, we used Learning workload type because we are only going to handle small amount of data for _testing_, put the database in the same resource group as before, named it `"group6cosmodb"`, and select **Canada Central** region. We use _serverless_ to minimize cost because we're only going to be using the database when the function application is running and will be paused for most of the time.
 
 ![alt text](./screenshots/image-2.png)
 Leave these default.

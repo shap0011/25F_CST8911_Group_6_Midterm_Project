@@ -115,7 +115,7 @@ We also created a subnet for the function app and connected the private endpoint
 
 ![alt text](./screenshots/image-19.png)
 
-We seprated the virtual machine, Cosmos DB, and Function App in different subnets to improve security by isolating the services and also improving performance by suing segmented IP addresses by providing more direct routes and decreasing traffic.
+We separated the virtual machine, Cosmos DB, and Function App in different subnets to improve security by isolating the services and also improving performance by suing segmented IP addresses by providing more direct routes and decreasing traffic.
 
 ![alt text](image.png)
 
@@ -159,7 +159,7 @@ This is the code for our function, which sends a JSON of the items in our Cosmos
 
 ![alt text](./screenshots/image-39.png)
 
-We created an environment variable to store the Cosmos DB URI as an additional security precaution. This avoids harcoding the value in the app.
+We created an environment variable to store the Cosmos DB URI as an additional security precaution. This avoids hardcoding the value in the app.
 
 ![alt text](./screenshots/image-36.png)
 

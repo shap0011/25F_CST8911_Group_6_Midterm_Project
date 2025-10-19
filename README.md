@@ -140,36 +140,40 @@ We **check** the connection to the **Function App** to verify that the **virtual
 
 Because access to our **Cosmos DB** is restricted to the **private endpoint**, we used the **Azure portal** within the **virtual machine**, located in the same **VNet**, to create a **new database** and **container**.
 
-![alt text](./screenshots/image-32.png)
+![Data Explorer Items](./screenshots/image-32.png)
 
-We created new items in the container we can access while testing the function.
+New items were created in the container to verify accessibility during function testing.
 
-![alt text](./screenshots/image-33.png)
+![Postman Download](./screenshots/image-33.png)
 
-We installed Postman to test the Azure funtion REST API.
+We installed **Postman** to test the **Azure Function REST API**.
 
-![alt text](./screenshots/image-42.png)
+![Adding Extensions](./screenshots/image-42.png)
 
-For creating a function we used VS Code and installed the following extensions:
+We used **Visual Studio Code** to create the function and installed the following extensions:
 
-- Azure Resources
-- Azure Functions
+- **Azure Resources**
+- **Azure Functions**
 
-![alt text](./screenshots/image-37.png)
+![VSC screenshot](./screenshots/image-37.png)
 
-This is the code for our function, which sends a JSON of the items in our Cosmos DB. It uses DefaultAzureCredential from Azure SDK to check authentication by checking the managed identity assigned to the Function App and performing an OAuth 2.0 token exhange which then allows the function to access and read the contents of the database. This is more secure than using the database connection string which involves storing the primary key in the application. To deploy this function to the Function App in the Azure portal, we allowed public access for a short period of time so VS Code can gain access to the Function App for simplicity's sake but in real world situations, we can set up a point to site (P2S) VPN from our computer to the VNet.
+This is the code for our function, which returns a JSON object containing the items from our Cosmos DB. It uses **DefaultAzureCredential** from the **Azure SDK** to authenticate by verifying the managed identity assigned to the Function App and performing an **OAuth 2.0 token exchange**, which then allows the function to access and read the database contents.
 
-![alt text](./screenshots/image-39.png)
+This approach is more secure than using a database connection string, as it avoids storing the primary key within the application.
 
-We created an environment variable to store the Cosmos DB URI as an additional security precaution. This avoids hardcoding the value in the app.
+To deploy this function to the **Function App** in the **Azure portal**, we temporarily allowed public access so that **VS Code** could connect to the Function App for simplicity. However, in real-world scenarios, we can establish a **Point-to-Site (P2S) VPN** from our local computer to the **VNet** instead.
 
-![alt text](./screenshots/image-36.png)
+![Environment variable](./screenshots/image-39.png)
 
-We created a user-managed identity for the Function App manually through Azure portal CLI because our subscription does not allow us to see "Cosmos DB Built-in Data Contributor" role in the list of available roles. This role is required to allow our Function App read our database.
+We created an **environment variable** to store the **Cosmos DB URI** as an additional security measure. This prevents hardcoding the value within the application.
 
-![alt text](./screenshots/image-30.png)
+![Code + Test Azure PowerShell output](./screenshots/image-36.png)
 
-We deployed the function in the function app to start our REST API.
+We manually created a **user-assigned managed identity** for the **Function App** through the **Azure portal CLI**, as our subscription does not include the **“Cosmos DB Built-in Data Contributor”** role in the list of available roles. This role is required to allow the Function App to _read data_ from our database.
+
+![Function App Essentials](./screenshots/image-30.png)
+
+The function was deployed to the **Function App** to initialize the **REST API**.
 
 ---
 

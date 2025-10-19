@@ -106,21 +106,21 @@ We’ve created our **Function App**, where we can deploy our **Azure Function R
 
 ### Networking
 
-![alt text](./screenshots/image-17.png)
+![Subnets](./screenshots/image-17.png)
 
-We created a subnet in the vnet for the Cosmos DB, this is where the private endpoint of the database is connected.
+A **subnet** was created in the **VNet** for **Cosmos DB**, which hosts the **private endpoint** connection for the database.
 
-![alt text](./screenshots/image-18.png)
+![Subnets for the Function App](./screenshots/image-18.png)
 
-We also created a subnet for the function app and connected the private endpoint.
+A **subnet** was also created for the **Function App**, and its **private endpoint** was connected.
 
 ![alt text](./screenshots/image-19.png)
 
-We separated the virtual machine, Cosmos DB, and Function App in different subnets to improve security by isolating the services and also improving performance by suing segmented IP addresses by providing more direct routes and decreasing traffic.
+We separated the **Virtual Machine**, **Cosmos DB**, and **Function App** into different subnets to improve security by isolating the services and to enhance performance by using segmented IP addresses, which provide more direct routes and reduce network traffic.
 
 ![alt text](./screenshots/image-47.png)
 
-These are the private endpoints for each services.
+Screenshot showing the **private endpoints** configured for each **service**.
 
 ---
 

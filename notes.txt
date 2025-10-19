@@ -1,0 +1,9 @@
+23.233.24.110
+
+HOME_IP="23.233.24.110/32"
+
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM5bRNko4tOt2FYYQUmkxscHeTG/A3kKANGgE8kt7xoE olga@lab3
+
+privateIpAddress: 10.0.0.4
+
+publicIpAddress: 20.63.14.20

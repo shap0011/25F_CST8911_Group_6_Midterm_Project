@@ -57,3 +57,25 @@ Connecting terminal to Azure Cloud Shell
 Switch subscription in Cloud Shell and register provider
 
 <img src="./screenshots/6_switch_subscription_in_cloud_shell_and_register_provider.png" alt="Switch subscription in Cloud Shell and register provider" title="Switch subscription in Cloud Shell and register provider" width="1000" />
+
+---
+
+## Create a Standard Public IP and run the Virtual Machine
+
+Public IP created, VM is running
+
+<img src="./screenshots/7_public_ip_created_vm_running.png" alt="Public IP created, VM is running" title="Public IP created, VM is running" width="1000" />
+
+---
+
+## Add the PC’s SSH key to the VM + lock NSG to the home IP
+
+### Create an SSH key
+
+Public key generated
+
+<img src="./screenshots/8_generated_public_key.png" alt="Public key generated" title="Public key generated" width="1000" />
+
+The entire public key
+
+<img src="./screenshots/9_entire_public_key.png" alt="Entire public key" title="Entire public key" width="1000" />

@@ -38,7 +38,9 @@ The resource group created
   </tr>
 </table>
 
-Creating a new storage account
+---
+
+## Creating a new storage account
 
 <table>
   <tr>
@@ -51,3 +53,7 @@ Creating a new storage account
 Connecting terminal to Azure Cloud Shell
 
 <img src="./screenshots/5_welcome_to_azure_cloud_shell_terminal.png" alt="Connecting terminal to Azure Cloud Shell" title="Connecting terminal to Azure Cloud Shell" width="1000" />
+
+Switch subscription in Cloud Shell and register provider
+
+<img src="./screenshots/6_switch_subscription_in_cloud_shell_and_register_provider.png" alt="Switch subscription in Cloud Shell and register provider" title="Switch subscription in Cloud Shell and register provider" width="1000" />

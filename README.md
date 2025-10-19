@@ -48,21 +48,21 @@ The virtual machine has been created and deployed.
 
 We created a **Cosmos DB** for **NoSQL** database, we used Learning workload type because we are only going to handle small amount of data for _testing_, put the database in the same resource group as before, named it `"group6cosmodb"`, and select **Canada Central** region. We use _serverless_ to minimize cost because we're only going to be using the database when the function application is running and will be paused for most of the time.
 
-![alt text](./screenshots/image-2.png)
+![Global distribution settings](./screenshots/image-2.png)
 
-Leave these default.
+Leave the **Global distribution** settings default.
 
-![alt text](./screenshots/image-3.png)
+![Connectivity method](./screenshots/image-3.png)
 
-For connectivity method, we selected private endpoint so that only services that are in the same virtual network such as our virtual machine and function, can access it. Communication between these services are done within a private IP address in the Azure network avoiding public internet access thus providing more security.
+For connectivity method, we selected a **private endpoint** so that only services within the same virtual network, such as our virtual machine and function, can access it. Communication between these services occurs over **private IP address** in the Azure network, avoiding public internet access and thereby providing greater security.
 
-![alt text](./screenshots/image-4.png)
+![Backup policy](./screenshots/image-4.png)
 
-Backup policy is set to periodic as we are not planning to keep the database for a long time. We selected zone-redundant backup storage to keep a replicate of the database with in the same region making it still availabe in case of an outage while geo-redundant backup would be too excessive.
+The **backup policy** is set to **periodic**, as we do not plan to keep the database for a long time. We selected **zone-redundant backup storage** to maintain a replica of the database within the same region ensuring availability in case of an outage, while **geo-redundant backup** would be excessive for our needs.
 
-![alt text](./screenshots/image-41.png)
+![Security settings](./screenshots/image-41.png)
 
-We selected key-based authentication to add security so that access is limited by using the private key and connection. This is in addition to Entra ID managed identity we're using for the function app.
+We selected **key-based authentication** to enhance security by restricting access through the use of a private key and secure connection. This is in addition to **Entra ID managed identity** used for the Function App.
 
 ---
 
@@ -70,16 +70,17 @@ We selected key-based authentication to add security so that access is limited b
 
 ![alt text](./screenshots/image-6.png)
 
-We created a function app with Flex consumption plan as it gives performance while being inexpensive  with scale to zero and pay-as-you-go rate.
+We created a function app with Flex consumption plan as it gives performance while being inexpensive with scale to zero and pay-as-you-go rate.
 
 ![alt text](./screenshots/image-12.png)
 
 Fill up the basic information for the function app:
+
 - selected our student subscription,
 - select resource group named **"CST8911-Group6"**,
 - named our function app **Group6FunctionApp**,
 - selected **Canada Central**,
-- chosen **Python 3.12** as it is a programming language we're very familiar with. 
+- chosen **Python 3.12** as it is a programming language we're very familiar with.
 
 ![alt text](./screenshots/image-43.png)
 
@@ -121,15 +122,15 @@ We separated the virtual machine, Cosmos DB, and Function App in different subne
 
 These are the private endpoints for each services.
 
-
 ---
 
 ### Environment Setup
+
 We set up our database and created a python function app.
 
 ![alt text](./screenshots/image-26.png)
 
-We connect to our virtual machine through Bastion in the Azure portal. 
+We connect to our virtual machine through Bastion in the Azure portal.
 
 ![alt text](./screenshots/image-27.png)
 
@@ -150,8 +151,9 @@ We installed Postman to test the Azure funtion REST API.
 ![alt text](./screenshots/image-42.png)
 
 For creating a function we used VS Code and installed the following extensions:
- - Azure Resources
- - Azure Functions
+
+- Azure Resources
+- Azure Functions
 
 ![alt text](./screenshots/image-37.png)
 
@@ -172,6 +174,7 @@ We deployed the function in the function app to start our REST API.
 ---
 
 ### Testing
+
 ![alt text](./screenshots/image-40.png)
 
 We tested the function in the azure portal to make sure that the function is working properly.

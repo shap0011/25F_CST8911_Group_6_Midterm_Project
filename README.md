@@ -3,7 +3,7 @@
 ## Students:
 
 - Durham Olga - 040687883 - shap0011@algonqionlive.com
-- Heallis Dom - heal0076@algonquinlive.com
+- Heallis Dom - 040728287 heal0076@algonquinlive.com
 - Mendoza Jediael - 041208322 - mend0214@algonquinlive.com
 - Parsons Matthew - 040909129 - pars0230@algonquinlive.com
 - Saini Saizal - 041168394 - sain0225@algonquinlive.com

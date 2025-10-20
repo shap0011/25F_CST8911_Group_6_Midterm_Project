@@ -196,7 +196,7 @@ We successfully sent an **HTTP GET request** and received a **JSON response** wi
 
 ## CONCLUSION
 
-## ✨ **Conclusion**
+
 
 The successful completion of this ***Azure Cloud Integration Project*** highlights our team’s ability to **design**, **deploy**, and **secure** a modern cloud solution using *Microsoft Azure services*.  
 We efficiently set up **Virtual Machines**, a **serverless Function App**, and **Cosmos DB**, all integrated within a secure network following *Azure best practices*.  

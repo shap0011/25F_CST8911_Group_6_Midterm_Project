@@ -199,4 +199,4 @@ In this project, our team successfully designed and deployed a secure and cost-e
 
 Through careful configuration, we minimized public exposure by utilizing private endpoints, managed identities, and OAuth 2.0 authentication. The Function App REST API was tested thoroughly using Postman, validating successful interaction with the Cosmos DB.
 
-This project demonstrates our team’s ability to architect, secure, and optimize cloud resources, showcasing practical understanding of Azure’s serverless, networking, and identity management services.
+This project demonstrates our team’s ability to architect, secure, and optimize cloud resources, showcasing practical understanding of Azure’s serverless, networking, and identity management services.Our deployment model aligns with real-world enterprise standards, emphasizing security, scalability, and cost efficiency.

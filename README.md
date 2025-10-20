@@ -196,13 +196,13 @@ We successfully sent an **HTTP GET request** and received a **JSON response** wi
 
 ## CONCLUSION
 
-The successful completion of this ***Azure Cloud Integration Project*** demonstrates our team’s collective ability to **design**, **deploy**, **secure**, and **manage** a modern cloud-based infrastructure using *Microsoft Azure services*. Through effective collaboration and strategic task distribution among all five members, we delivered a **fully functional** and **optimized cloud solution** that follows *industry best practices* and *Azure security standards*.
+The successful completion of this ***Azure Cloud Integration Project*** demonstrates we collective ability to **design**, **deploy**, **secure**, and **manage** a modern cloud-based infrastructure using *Microsoft Azure services*. Through effective collaboration and strategic task distribution among all five members, we delivered a **fully functional** and **optimized cloud solution** that follows *industry best practices* and *Azure security standards*.
 
 Our project journey began with the deployment of **Virtual Machines (VMs)** using the *most cost-efficient options*, ensuring **optimal resource utilization** and **minimal costs**. These VMs were monitored and managed using tools such as **Azure Monitor**, **Azure Security Center**, and the **Azure Portal**, enabling **proactive performance** and **security management**.
 
 Next, we developed and deployed a **serverless Azure Function App**, integrated seamlessly with **Azure Cosmos DB** for **efficient**, **scalable**, and **globally distributed data storage**. This integration showcased our ability to handle **data-driven applications** within a *serverless architecture*, offering both **reliability** and **cost savings**.
 
-To extend the solution’s functionality, our team implemented a **RESTful API** within *Azure Functions* to enable **secure communication** between clients and the database. For **identity management** and **data protection**, we integrated **Azure Active Directory (AAD)** with **OAuth 2.0 authentication**, ensuring that all API endpoints were properly **secured** and accessible only to *authorized users*.
+To extend the solution’s functionality, we implemented a **RESTful API** within *Azure Functions* to enable **secure communication** between clients and the database. For **identity management** and **data protection**, we integrated **Azure Active Directory (AAD)** with **OAuth 2.0 authentication**, ensuring that all API endpoints were properly **secured** and accessible only to *authorized users*.
 
 Comprehensive testing using **Postman** validated the **API’s reliability**, **performance**, and **authentication mechanisms**, confirming that each component interacted seamlessly under *real-world conditions*.
 

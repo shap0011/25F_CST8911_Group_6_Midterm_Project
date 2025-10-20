@@ -193,3 +193,10 @@ Note that **Postman was run within the virtual machine**, since any requests fro
 ![Postman Get data Test result](./screenshots/image-31.png)
 
 We successfully sent an **HTTP GET request** and received a **JSON response** with the items from the **Cosmos DB**.
+
+## CONCLUSION
+In this project, our team successfully designed and deployed a secure and cost-efficient cloud-based solution using Microsoft Azure. We implemented a fully integrated system comprising a Virtual Machine, Azure Function App, and Cosmos DB, all operating within a private network to ensure security and compliance with Azure best practices.
+
+Through careful configuration, we minimized public exposure by utilizing private endpoints, managed identities, and OAuth 2.0 authentication. The Function App REST API was tested thoroughly using Postman, validating successful interaction with the Cosmos DB.
+
+This project demonstrates our team’s ability to architect, secure, and optimize cloud resources, showcasing practical understanding of Azure’s serverless, networking, and identity management services.

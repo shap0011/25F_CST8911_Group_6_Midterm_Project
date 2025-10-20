@@ -1,9 +1,15 @@
 23.233.24.110
 
-HOME_IP="23.233.24.110/32"
+HOME_IP=23.233.24.110/32
 
 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM5bRNko4tOt2FYYQUmkxscHeTG/A3kKANGgE8kt7xoE olga@lab3
 
 privateIpAddress: 10.0.0.4
 
 publicIpAddress: 20.63.14.20
+
+PUBKEY='ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIM5bRNko4tOt2FYYQUmkxscHeTG/A3kKANGgE8kt7xoE olga@lab3'
+
+
+COSMOS_CONN_STR
+AccountEndpoint=https://cosmosmidterm9343.documents.azure.com:443/;AccountKey=NUb9B7rXwHNDjYrqwLJGXQIS1N6CaNshxjMcUZCPe1ukfhTYTLF4ar69CgDzk2bK8ZLemkAYWMH2ACDbQHjlYA==;

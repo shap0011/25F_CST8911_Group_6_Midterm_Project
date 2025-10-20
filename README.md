@@ -316,3 +316,70 @@ def items_post(req: func.HttpRequest, doc: func.Out[Any]) -> func.HttpResponse:
 ### Added Cosmos DB connection string to `func-midterm-c17521` Function App | Environment variables
 
 <img src="./screenshots/20_added_connection_string.png" alt="Added Cosmos DB connection string" title="Added Cosmos DB connection string" width="1000" />
+
+### Created a new function items_get
+
+dir func-midterm-c17521 / function_app.py
+
+```
+import azure.functions as func
+import json
+import logging
+from typing import Any
+
+app = func.FunctionApp()
+
+# ---------- GET ----------
+@app.function_name(name="items_get")
+@app.route(route="items_get", methods=["get"], auth_level=func.AuthLevel.ANONYMOUS)
+def items_get(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info("GET /items_get")
+    name = req.params.get('name')
+    if not name:
+        try:
+            body = req.get_json()
+            name = body.get('name')
+        except Exception:
+            name = None
+
+    if name:
+        return func.HttpResponse(f"Hello, {name}. This HTTP triggered function executed successfully.")
+    return func.HttpResponse(
+        "This HTTP triggered function executed successfully. Pass a name via ?name= or JSON {'name': '...'}",
+        status_code=200,
+    )
+
+# ---------- POST (Cosmos output binding) ----------
+@app.function_name(name="items_post")
+@app.route(route="items_post", methods=["post"], auth_level=func.AuthLevel.FUNCTION)
+@app.cosmos_db_output(
+    arg_name="doc",
+    database_name="dbMidterm",
+    container_name="items",
+    connection="COSMOS_CONN_STR",  # app setting must exist
+    create_if_not_exists=False,
+    partition_key="/id"
+)
+def items_post(req: func.HttpRequest, doc: func.Out[Any]) -> func.HttpResponse:
+    logging.info("POST /items_post")
+    try:
+        body = req.get_json()
+    except ValueError:
+        return func.HttpResponse(json.dumps({"error": "Invalid JSON"}), status_code=400, mimetype="application/json")
+
+    if "id" not in body:
+        return func.HttpResponse(json.dumps({"error": "Missing 'id'"}), status_code=400, mimetype="application/json")
+
+    # Write to Cosmos via binding
+    doc.set(body)
+
+    return func.HttpResponse(json.dumps({"ok": True, "item": body}),
+                             mimetype="application/json", status_code=200)
+
+```
+
+### Restart & Verify
+
+The restarting is too slow and needs troubleshooting
+
+<img src="./screenshots/21_troubleshooting_the_slow_restarting.png" alt="The restarting is too slow" title="The restarting is too slow" width="1000" />

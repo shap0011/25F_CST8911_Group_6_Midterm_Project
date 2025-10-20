@@ -157,7 +157,7 @@ We used **Visual Studio Code** to create the function and installed the followin
 
 ![VSC screenshot](./screenshots/image-37.png)
 
-This is the code for our function, which returns a JSON object containing the items from our Cosmos DB. It uses **DefaultAzureCredential** from the **Azure SDK** to authenticate by verifying the managed identity assigned to the Function App and performing an **OAuth 2.0 token exchange**, which then allows the function to access and read the database contents.
+This is the code for our HTTP-triggered function, which returns a JSON object containing all the items from our Cosmos DB. It uses **DefaultAzureCredential** from the **Azure SDK** to authenticate by verifying the managed identity assigned to the Function App and performing an **OAuth 2.0 token exchange**, which then allows the function to access and read the database contents.
 
 This approach is more secure than using a database connection string, as it avoids storing the primary key within the application.
 
@@ -185,10 +185,10 @@ The **function** was tested in the **Azure portal** to verify that it is functio
 
 ![Postman Get data Test](./screenshots/image-29.png)
 
-We thoroughly tested the function using **Postman** to send an **HTTP GET request** to the Function App’s default domain:
-`group6functionapp-e6huapcubacahdcf.canadacentral-01.azurewebsites.net`.
+We thoroughly tested the function using **Postman** to send an **HTTP GET request** to the Function App’s function URL:
+`https://group6functionapp-e6huapcubacahdcf.canadacentral-01.azurewebsites.net/api/httpget?code=8pEE83fbn-vwU4WgvnztGvsYlijurv8zOOD0drnb_S9lAzFuCwhbxg==`.
 
-Note that **Postman was run within the virtual machine**, since any requests from IPs outside the virtual network are denied. This serves as one of our key **security measures**.
+Note that **Postman was running within the virtual machine**, since any requests from IPs outside the virtual network are denied. This serves as one of our key **security measures**.
 
 ![Postman Get data Test result](./screenshots/image-31.png)
 
